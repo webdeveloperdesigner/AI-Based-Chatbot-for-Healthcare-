@@ -1,0 +1,324 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 10px;
+    height: auto;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.logout {
+    color: white;
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-weight: bold;
+}
+
+.logout:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 0 10px 10px 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.toggle-sidebar {
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-sidebar:hover {
+    transform: rotate(90deg);
+}
+
+/* Sidebar Toggle Button in Navbar */
+.sidebar-toggle-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;  /* Smaller font size */
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;  /* Reduced margin */
+    padding: 8px;  /* Smaller padding */
+    transition: color 0.3s;
+    width: auto;
+}
+
+.sidebar-toggle-btn:hover {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle-btn {
+        font-size: 16px;  /* Even smaller font size on smaller screens */
+        margin-right: 8px;  /* Further reduced margin for smaller screens */
+        padding: 6px;  /* Smaller padding on smaller screens */
+    }
+}
+
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-user-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: auto;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* User Details */
+#userDetailsContainer {
+    flex-grow: 1;
+    padding: 30px;
+    margin-left: 280px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    overflow: auto;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+th {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+}
+
+.user-list-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .user-info {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        height: auto;
+        transform: translateY(-100%);
+    }
+
+    .sidebar.hidden {
+        display: none;
+    }
+
+    #userDetailsContainer {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+/* Access Admin Page Button - New Era Style */
+.access-admin-btn {
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.access-admin-btn:hover {
+    background: linear-gradient(90deg, #81c784, #4caf50);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Creative Alert Styles */
+.alert-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e293b; /* Dark slate background */
+    color: #ffffff; /* White text */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    z-index: 9999;
+    display: none; /* Initially hidden */
+    animation: fadeIn 0.3s ease-out;
+}
+
+.alert-container h4 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.alert-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.alert-buttons {
+    margin-top: 15px;
+}
+
+.alert-buttons button {
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.alert-buttons button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+
+/* Fade-in animation for alert */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,98 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .image-container {
+    width: 37%;
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  .form-container {
+    width: 50%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-field textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .contact-info {
+    margin-top: 30px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 5px;
+  }
+  
+  .social-media {
+    margin-top: 2 0px;
+  }
+  
+  .social-media a {
+    margin-right: 10px;
+  }
+  
+  .contact-info p:first-child {
+    font-weight: bold;
+    text-align: right; /* Aligns "Contact" text to the right */
+  }
+  
+  .contact-info {
+    text-align: right; /* Aligns all contact info to the right */
+  }
