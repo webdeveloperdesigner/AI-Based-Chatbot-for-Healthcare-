@@ -29,7 +29,7 @@ const Home = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer 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`,
+            Authorization: `API`,
           },
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
